@@ -199,8 +199,8 @@ def latlondist(latd1, lond1, latd2, lond2):
     a = 6378137.0       # [m] Major semi-axis WGS-84
     r1 = rwgs84(latd1)
     r2 = rwgs84(latd2)
-    res2  = 0.5*(abs(latd1)*(r1+a) + abs(latd2)*(r2+a)) / \
-        (abs(latd1)+abs(latd2))
+    res2 = 0.5*(np.abs(latd1)*(r1+a) + np.abs(latd2)*(r2+a)) / \
+        (np.abs(latd1)+np.abs(latd2))
 
     # Condition
     sw = (latd1*latd2 >= 0.)

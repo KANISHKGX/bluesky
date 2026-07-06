@@ -3,12 +3,12 @@
 from math import *
 import numpy as np
 import numba
-from bluesky import settings
+#from bluesky import settings
 import numba
 
 
 
-settings.set_variable_defaults(casmach_threshold=2.0)
+#settings.set_variable_defaults(casmach_threshold=2.0)
 # International standard atmpshere only up to 72000 ft / 22 km
 
 #
@@ -33,7 +33,7 @@ gamma2 = 3.5                # gamma/(gamma-1) for air
 beta = -0.0065              # [K/m] ISA temp gradient below tropopause
 Rearth = 6371000.           # m  Average earth radius
 a0  = np.sqrt(gamma*R*T0)   # sea level speed of sound ISA
-casmach_thr = settings.casmach_threshold # Threshold below which speeds should
+casmach_thr = 2.0 # Threshold below which speeds should
                             # be considered as Mach numbers in casormach* functions
 
 
